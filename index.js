@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 targetElement.style.backgroundColor = 'yellow';
                 setTimeout(() => {
                     targetElement.style.backgroundColor = '';
-                }, 1000);
+                }, 800);
             }
         });
     });
