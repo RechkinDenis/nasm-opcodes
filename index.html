@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Справочник по опкодам ассемблера</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="light-mode">
+
+    <div class="opcode-buttons">
+        <button class="opcode-button" data-opcode="ADD">ADD</button>
+        <button class="opcode-button" data-opcode="CALL">CALL</button>
+        <button class="opcode-button" data-opcode="CMP">CMP</button>
+        <button class="opcode-button" data-opcode="DEC">DEC</button>
+        <button class="opcode-button" data-opcode="DIV">DIV</button>
+        <button class="opcode-button" data-opcode="HLT">HLT</button>
+        <button class="opcode-button" data-opcode="IDIV">IDIV</button>
+        <button class="opcode-button" data-opcode="IMUL">IMUL</button>
+        <button class="opcode-button" data-opcode="INC">INC</button>
+        <button class="opcode-button" data-opcode="INT">INT</button>
+        <button class="opcode-button" data-opcode="INTO">INTO</button>
+        <button class="opcode-button" data-opcode="IRET">IRET</button>
+        <button class="opcode-button" data-opcode="JNZ">JNZ</button>
+        <button class="opcode-button" data-opcode="JMP">JMP</button>
+        <button class="opcode-button" data-opcode="LEA">LEA</button>
+        <button class="opcode-button" data-opcode="MOV">MOV</button>
+        <button class="opcode-button" data-opcode="MUL">MUL</button>
+        <button class="opcode-button" data-opcode="POP">POP</button>
+        <button class="opcode-button" data-opcode="PUSH">PUSH</button>
+        <button class="opcode-button" data-opcode="RET">RET</button>
+        <button class="opcode-button" data-opcode="RETN">RETN</button>
+        <button class="opcode-button" data-opcode="SUB">SUB</button>
+        <button class="opcode-button" data-opcode="XOR">XOR</button>
+    </div>
+
+    <main id="opcodeList">
+        <div class="opcode">
+            <h2 id="ADD">ADD</h2>
+            <p><strong>Описание:</strong> Складывает операнд-источник с операндом-назначением и сохраняет результат в операнде-назначении.</p>
+            <p><strong>Синтаксис:</strong> <code>ADD destination, source</code></p>
+            <p><strong>Пример:</strong> <code>ADD AX, BX</code></p>
+        </div>
+
+        <div class="opcode">
+            <h2 id="CALL">CALL</h2>
+            <p><strong>Описание:</strong> Вызывает процедуру, помещая адрес возврата в стек и переходя к процедуре.</p>
+            <p><strong>Синтаксис:</strong> <code>CALL procedure</code></p>
+            <p><strong>Пример:</strong> <code>CALL myProcedure</code></p>
+        </div>
+
+        <div class="opcode">
+            <h2 id="CMP">CMP</h2>
+            <p><strong>Описание:</strong> Сравнивает два операнда, вычитая источник из назначения, устанавливая флаги, но не сохраняя результат.</p>
+            <p><strong>Синтаксис:</strong> <code>CMP destination, source</code></p>
+            <p><strong>Пример:</strong> <code>CMP AX, BX</code></p>
+        </div>
+
+        <div class="opcode">
+            <h2 id="DEC">DEC</h2>
+            <p><strong>Описание:</strong> Уменьшает операнд-назначение на 1.</p>
+            <p><strong>Синтаксис:</strong> <code>DEC destination</code></p>
+            <p><strong>Пример:</strong> <code>DEC AX</code></p>
+        </div>
+
+        <div class="opcode">
+            <h2 id="DIV">DIV</h2>
+            <p><strong>Описание:</strong> Делит операнд-назначение на операнд-источник, сохраняя результат в аккумуляторе, а остаток — в регистре остатка.</p>
+            <p><strong>Синтаксис:</strong> <code>DIV source</code></p>
+            <p><strong>Пример:</strong> <code>DIV BX</code></p>
+        </div>
+
+        <div class="opcode">
+            <h2 id="HLT">HLT</h2>
+            <p><strong>Описание:</strong> Останавливает процессор до тех пор, пока не произойдет сброс или прерывание.</p>
+            <p><strong>Синтаксис:</strong> <code>HLT</code></p>
+            <p><strong>Пример:</strong> <code>HLT</code></p>
+        </div>
+
+        <div class="opcode">
+            <h2 id="IDIV">IDIV</h2>
+            <p><strong>Описание:</strong> Делит знаковые целые числа, сохраняя частное и остаток в определенных регистрах.</p>
+            <p><strong>Синтаксис:</strong> <code>IDIV source</code></p>
+            <p><strong>Пример:</strong> <code>IDIV BX</code></p>
+        </div>
+
+        <div class="opcode">
+            <h2 id="IMUL">IMUL</h2>
+            <p><strong>Описание:</strong> Умножает знаковые целые числа.</p>
+            <p><strong>Синтаксис:</strong> <code>IMUL destination, source</code></p>
+            <p><strong>Пример:</strong> <code>IMUL AX, BX</code></p>
+        </div>
+
+        <div class="opcode">
+            <h2 id="INC">INC</h2>
+            <p><strong>Описание:</strong> Увеличивает операнд-назначение на 1.</p>
+            <p><strong>Синтаксис:</strong> <code>INC destination</code></p>
+            <p><strong>Пример:</strong> <code>INC AX</code></p>
+        </div>
+
+        <div class="opcode">
+            <h2 id="INT">INT</h2>
+            <p><strong>Описание:</strong> Вызывает программное прерывание.</p>
+            <p><strong>Синтаксис:</strong> <code>INT interrupt_number</code></p>
+            <p><strong>Пример:</strong> <code>INT 21h</code></p>
+        </div>
+
+        <div class="opcode">
+            <h2 id="INTO">INTO</h2>
+            <p><strong>Описание:</strong> Прерывает выполнение программы, если установлен флаг переполнения.</p>
+            <p><strong>Синтаксис:</strong> <code>INTO</code></p>
+            <p><strong>Пример:</strong> <code>INTO</code></p>
+        </div>
+
+        <div class="opcode">
+            <h2 id="IRET">IRET</h2>
+            <p><strong>Описание:</strong> Возвращается из обработчика прерываний, извлекая IP, CS и флаги из стека.</p>
+            <p><strong>Синтаксис:</strong> <code>IRET</code></p>
+            <p><strong>Пример:</strong> <code>IRET</code></p>
+        </div>
+
+        <div class="opcode">
+            <h2 id="JNZ">JNZ</h2>
+            <p><strong>Описание:</strong> Переходит по указанному адресу, если флаг нуля не установлен.</p>
+            <p><strong>Синтаксис:</strong> <code>JNZ label</code></p>
+            <p><strong>Пример:</strong> <code>JNZ myLabel</code></p>
+        </div>
+
+        <div class="opcode">
+            <h2 id="JMP">JMP</h2>
+            <p><strong>Описание:</strong> Безусловно переходит по указанному адресу.</p>
+            <p><strong>Синтаксис:</strong> <code>JMP label</code></p>
+            <p><strong>Пример:</strong> <code>JMP myLabel</code></p>
+        </div>
+
+        <div class="opcode">
+            <h2 id="LEA">LEA</h2>
+            <p><strong>Описание:</strong> Загружает эффективный адрес операнда-источника в регистр назначения.</p>
+            <p><strong>Синтаксис:</strong> <code>LEA destination, source</code></p>
+            <p><strong>Пример:</strong> <code>LEA AX, [BX+SI]</code></p>
+        </div>
+
+        <div class="opcode">
+            <h2 id="MOV">MOV</h2>
+            <p><strong>Описание:</strong> Перемещает данные из операнда-источника в операнд-назначение.</p>
+            <p><strong>Синтаксис:</strong> <code>MOV destination, source</code></p>
+            <p><strong>Пример:</strong> <code>MOV AX, BX</code></p>
+        </div>
+
+        <div class="opcode">
+            <h2 id="MUL">MUL</h2>
+            <p><strong>Описание:</strong> Умножает беззнаковые целые числа.</p>
+            <p><strong>Синтаксис:</strong> <code>MUL source</code></p>
+            <p><strong>Пример:</strong> <code>MUL BX</code></p>
+        </div>
+
+        <div class="opcode">
+            <h2 id="POP">POP</h2>
+            <p><strong>Описание:</strong> Извлекает верхнее значение из стека в операнд-назначение.</p>
+            <p><strong>Синтаксис:</strong> <code>POP destination</code></p>
+            <p><strong>Пример:</strong> <code>POP AX</code></p>
+        </div>
+
+        <div class="opcode">
+            <h2 id="PUSH">PUSH</h2>
+            <p><strong>Описание:</strong> Помещает операнд-источник в стек.</p>
+            <p><strong>Синтаксис:</strong> <code>PUSH source</code></p>
+            <p><strong>Пример:</strong> <code>PUSH AX</code></p>
+        </div>
+
+        <div class="opcode">
+            <h2 id="RET">RET</h2>
+            <p><strong>Описание:</strong> Возвращается из процедуры, извлекая адрес возврата из стека.</p>
+            <p><strong>Синтаксис:</strong> <code>RET</code></p>
+            <p><strong>Пример:</strong> <code>RET</code></p>
+        </div>
+
+        <div class="opcode">
+            <h2 id="RETN">RETN</h2>
+            <p><strong>Описание:</strong> То же, что и RET, но используется в некоторых специфических контекстах для возврата из процедур.</p>
+            <p><strong>Синтаксис:</strong> <code>RETN</code></p>
+            <p><strong>Пример:</strong> <code>RETN</code></p>
+        </div>
+
+        <div class="opcode">
+            <h2 id="SUB">SUB</h2>
+            <p><strong>Описание:</strong> Вычитает операнд-источник из операнда-назначения и сохраняет результат в назначении.</p>
+            <p><strong>Синтаксис:</strong> <code>SUB destination, source</code></p>
+            <p><strong>Пример:</strong> <code>SUB AX, BX</code></p>
+        </div>
+
+        <div class="opcode">
+            <h2 id="XOR">XOR</h2>
+            <p><strong>Описание:</strong> Выполняет побитовую операцию XOR между операндом-источником и операндом-назначением, сохраняя результат в назначении.</п>
+            <p><strong>Синтаксис:</strong> <code>XOR destination, source</code></p>
+            <p><strong>Пример:</strong> <code>XOR AX, BX</code></p>
+        </div>
+    </main>
+    <script src="./index.js"></script>
+</body>
+</html>
